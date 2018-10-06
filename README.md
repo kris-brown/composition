@@ -1,2 +1,1 @@
 # composition
-Functional / Music composition
