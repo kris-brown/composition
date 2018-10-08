@@ -26,7 +26,11 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
+      Lib,
+      Utilities,
+      Primitive,
+      Form
+
   other-modules:
       Paths_composition
   hs-source-dirs:
@@ -36,6 +40,9 @@ library
       , generic-random
       , QuickCheck
       , enumerate
+      , mezzo
+      , Euterpea
+      , deepseq
   default-language: Haskell2010
 
 executable comp
@@ -52,6 +59,7 @@ executable comp
     , enumerate
     , tagged
   default-language: Haskell2010
+
 
 test-suite composition-test
   type: exitcode-stdio-1.0

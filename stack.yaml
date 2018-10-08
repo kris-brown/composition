@@ -18,7 +18,7 @@
 #
 # resolver: ./custom-snapshot.yaml
 # resolver: https://example.com/snapshots/2018-01-01.yaml
-resolver: lts-8.24
+resolver: lts-9.6
 
 # User packages to be built.
 # Various formats can be used as shown in the example below.
@@ -40,7 +40,14 @@ packages:
 # (e.g., acme-missiles-0.3)
 extra-deps:
 - enumerate-0.2.2
+- mezzo-0.3.1.0
+- Euterpea-2.0.6
 - spiros-0.0.0
+- HCodecs-0.5.1
+- PortMidi-0.1.6.1
+- arrows-0.4.4.2
+- Stream-0.4.7.2
+- lazysmallcheck-0.6
 # Override default flag values for local packages and extra-deps
 # flags: {}
 

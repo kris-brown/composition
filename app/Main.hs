@@ -2,14 +2,18 @@ module Main where
 
 import           Data.Tagged           (Tagged)
 import           Enumerate.Cardinality (reifyCardinality)
-import           Lib
-import           Test.QuickCheck       (Gen, arbitrary, sample')
+import           Lib                   (Lead)
+import           Primitive             (PitchClass)
+import           Test.QuickCheck       (Gen, arbitrary)
+import           Utilities             (sample, samplePlay)
 
 main :: IO ()
 main = do
-  ns <- sample' (arbitrary :: Gen PitchClass)
-  putStrLn $ "Some random PitchClasses "++ show ns
+  putStrLn "Some random PitchClasses "
+  samplePlay 3 (arbitrary :: Gen PitchClass)
   putStrLn $ "Cardinality of 'PitchClass' is "++show (reifyCardinality ( [] ::  [PitchClass] ))
-  is <-  sample' (arbitrary :: Gen Lead)
-  putStrLn $ "Some random voice leadings "++ show is
+
+  putStrLn "Some random voice leadings "
+  is <- sample 3 (arbitrary :: Gen Lead)
+  print is
   putStrLn $ "Cardinality of 'Lead' is "++show (reifyCardinality ( []::  [Lead] ))
