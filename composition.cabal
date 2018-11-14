@@ -29,7 +29,8 @@ library
       Lib,
       Utilities,
       Primitive,
-      Form
+      Form,
+      TypeLevel
 
   other-modules:
       Paths_composition
